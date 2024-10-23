@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        :root {
+            --primary-bg: #1a1e23;
+            --card-bg: #2a2f35;
+            --text-color: #e0e0e0;
+            --accent-color: #3a88fe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .role-card {
+            background-color: #1e4a5f;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .technologies {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #a0a0a0;
+            padding: 0.25rem 0;  /* Reduced padding */
+        }
+
+        .education-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .education-item {
+            margin-bottom: 2rem;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item h3 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item .date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .contact-link {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 0.5rem;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="grid-layout">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Who am I? section -->
+                <div class="card">
+                    <h1>Who am I?</h1>
+                    <p>Hi, I'm Mathias! I'm a frontend developer currently studying at Aalborg University. 
+                       I am passionate about creating innovative software solutions that enhance user experiences. 
+                       If my profile interests you, please feel free to 
+                       <a href="#contact" class="contact-link">contact</a> me.</p>
+                </div>
+
+                <!-- Role section -->
+                <div class="role-card">
+                    Student & Frontend Developer
+                </div>
+
+                <!-- Technologies section -->
+                <div class="card">
+                    <h2>Technologies</h2>
+                    <div class="technologies">
+                        <div class="tech-item">📜 JavaScript</div>
+                        <div class="tech-item">⚛️ React</div>
+                        <div class="tech-item">📄 HTML</div>
+                        <div class="tech-item">🎨 CSS</div>
+                        <div class="tech-item">📊 Git</div>
+                        <div class="tech-item">🐱 GitHub</div>
+                        <div class="tech-item">🎨 Figma</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column (Education) -->
+            <div class="education-card">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Master in Interaction Design</h3>
+                    <div class="date">Aalborg University - 2024 to present</div>
+                    <p>In this program, I am gaining expertise in interactive technology with an emphasis on user-centered design.</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Bachelor in Information Technology</h3>
+                    <div class="date">Aalborg University - 2020 to 2023</div>
+                    <p>During my bachelor's program, I gained comprehensive knowledge in software development 
+                    and user experience design. Key areas of study included:</p>
+                    <ul>
+                        <li>• Problem-based learning through real-world projects</li>
+                        <li>• User interface design principles and implementation</li>
+                        <li>• Web development using modern frameworks and technologies</li>
+                        <li>• User research and usability testing methodologies</li>
+                        <li>• Database design and management</li>
+                        <li>• Object-oriented programming and software architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
